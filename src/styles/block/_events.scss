@@ -1,0 +1,102 @@
+.events {
+  margin-top: 120px;
+  @include content-padding-inline;
+
+  margin-top: 90px;
+
+  &__container {
+    padding-top: 60px;
+  }
+
+  &__title {
+    @extend %h-2;
+
+    margin: 0 auto;
+  }
+
+  &__item {
+    padding-bottom: 60px;
+
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    cursor: pointer;
+
+    &-image {
+      display: block;
+      object-fit: cover;
+      padding: 0;
+
+      width: 100%;
+      height: 356px;
+    }
+
+    &--label {
+      @extend %main-text;
+
+      padding-top: 20px;
+      color: $main;
+    }
+
+    &--name {
+      @extend %h-3;
+
+      padding-top: 10px;
+    }
+
+    &--description {
+      @extend %main-text;
+
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__ticket {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 60px;
+    background-color: $main;
+
+    border: none;
+    cursor: pointer;
+
+    &--text {
+      @extend %ticket;
+
+      white-space: nowrap;
+    }
+  }
+
+  &__calendar {
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    width: 100%;
+    height: 60px;
+    border: 1px solid $main;
+    background-color: #fff;
+    outline: none;
+    cursor: pointer;
+
+    &--text {
+      @extend %buttons-text;
+
+      text-align: center;
+      color: $main;
+    }
+
+    &--btn {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
