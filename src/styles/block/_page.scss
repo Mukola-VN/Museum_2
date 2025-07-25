@@ -1,16 +1,16 @@
 .page {
   scroll-behavior: smooth;
- overflow-x: hidden;
-  &__body{
+  overflow-x: hidden;
+  &__body {
     padding: 0;
     margin: 0;
   }
-  
-   html:target {
+
+  html:target {
     scroll-behavior: auto;
   }
 
-    &__menu {
+  &__menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -23,8 +23,8 @@
     pointer-events: none;
     transform: translateY(-100%);
     transition:
-    transform 0.5s ease,
-    opacity 0.5s ease;
+      transform 0.5s ease,
+      opacity 0.5s ease;
 
     &:target {
       opacity: 1;

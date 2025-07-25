@@ -1,105 +1,225 @@
 <!doctype html>
-<html lang="en" class="page">
+<html
+  lang="en"
+  class="page"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>NA MU</title>
+    <link
+      rel="stylesheet"
+      href="./styles/main.scss"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NA MU</title>
-  <link rel="stylesheet" href="./styles/main.scss" />
-</head>
+  <body class="page__body">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__top-bar">
+          <a
+            href="#"
+            class="header__logo"
+          >
+            <img
+              src="../src/images/header/header-logo.png"
+              alt="NA MU logo"
+              class="header__logo-img"
+            />
+          </a>
+          <!-- іконка -->
+          <div class="top-bar__icons">
+            <a
+              href="#menu"
+              class="icon icon--menu"
+            ></a>
+          </div>
+        </div>
+        <div class="header__text">
+          <div class="header__date-text">10 серпня - 10 листопада</div>
 
-<body class="page__body">
-  <header class="header">
-    <div class="header__container">
-      <div class="header__top-bar">
-        <a href="#" class="header__logo">
-          <img src="../src/images/header/header-logo.png" alt="NA MU logo" class="header__logo-img">
+          <!-- Заголовок  -->
+          <div class="header__title">
+            <h1 class="header__title-text">Мистецтво ХІХ - ХХ ст.</h1>
+          </div>
+
+          <div class="header__description-text">
+            Внесок українських митців у світову культуру 19-20ст
+          </div>
+        </div>
+
+        <button class="header__ticket">
+          <span class="header__ticket-text">Купити квиток</span>
+        </button>
+
+        <div class="header__image">
+          <img
+            src="../src/images/header/mobile-header-img.png"
+            alt="foto"
+            class="header__image-img"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- ASIDE -->
+    <aside
+      class="page__menu menu"
+      id="menu"
+    >
+      <div class="menu__top-bar">
+        <div class="menu__logo">
+          <a href="#">
+            <img
+              src="../src/images/menu/menu-logo.png"
+              alt="NA MU logo"
+              class="menu__logo--img"
+            />
+          </a>
+        </div>
+        <div class="menu__icons">
+          <a
+            href="#"
+            class="icon icon--ua"
+          ></a>
+          <a
+            href="#"
+            class="icon icon--arrow"
+          ></a>
+          <a
+            href="#"
+            class="icon icon--close"
+          ></a>
+        </div>
+      </div>
+
+      <div class="menu__schedule">
+        <span class="menu__schedule-label">Розклад сьогодні:</span>
+        <span class="menu__schedule-hours">12:00 - 19:00</span>
+      </div>
+
+      <address class="menu__address">
+        <a
+          href="https://www.google.com/maps?q=вул.+М.+Грушевського,+6,+Київ,+01001"
+          target="_blank"
+          class="menu__address-link"
+        >
+          <span class="menu__address-label">Адреса:</span>
+          <span class="menu__address-text">Київ, вул. М.Грушевського,6</span>
         </a>
-        <!-- іконка -->
-        <div class="top-bar__icons">
-          <a href="#menu" class="icon icon--menu"></a>
-        </div>
+      </address>
+
+      <div class="menu__content">
+        <nav class="nav menu__nav">
+          <ul>
+            <li class="nav__item">
+              <a
+                class="nav__link"
+                href="#Актуальні виставки"
+              >
+                Актуальні виставки
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a
+                class="nav__link"
+                href="#Найближчі події"
+              >
+                Найближчі події
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a
+                class="nav__link"
+                href="#Новини"
+              >
+                Новини
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Border -->
+        <div class="menu__border"></div>
       </div>
-      <div class="header__text">
 
-        <div class="header__date-text">10 серпня - 10 листопада</div>
-
-        <!-- Заголовок  -->
-        <div class="header__title">
-          <h1 class="header__title-text">Мистецтво ХІХ - ХХ ст.</h1>
-        </div>
-
-        <div class="header__description-text">
-          Внесок українських митців у світову культуру 19-20ст
-        </div>
-      </div>
-
-      <div class="header__ticket">
+      <button class="menu__ticket">
         <span class="header__ticket-text">Купити квиток</span>
-      </div>
+      </button>
+    </aside>
 
-      <div class="header__image">
-        <img src="../src/images/header/mobile-header-img.png" alt="foto" class="header__image-img" />
-      </div>
+    <main
+      class="main"
+      id="events"
+    >
+      <section class="expositions">
+        <h2 class="expositions__title">Актуальні виставки</h2>
 
-    </div>
-  </header>
+        <div class="expositions__container">
+          <!-- 1-item -->
+          <div class="expositions__item">
+            <img
+              src="/src/images/events/event-img-1.png"
+              alt="item-foto"
+              class="events__item-image"
+            />
 
-  <!-- ASIDE -->
-  <aside class="page__menu menu" id="menu">
-    <div class="menu__top-bar">
-      <div class="menu__logo">
-        <a href="#">
-          <img src="../src/images/menu/menu-logo.png" alt="NA MU logo" class="menu__logo--img">
-        </a>
-      </div>
-      <div class="menu__icons">
-        <a href="#" class="icon icon--ua"></a>
-        <a href="#" class="icon icon--arrow"></a>
-        <a href="#" class="icon icon--close"></a>
-      </div>
-    </div>
+            <div class="expositions__item--content">
+              <div class="expositions__item--label">11.07 - 22.09</div>
+              <div class="expositions__item--name">
+                Кураторська виставка
+                <br />
+                “Ангели”
+              </div>
+              <div class="expositions__item--description">
+                Виставковий проект «Ангели» – знакова подія для української
+                культури і водночас наймасштабніший...
+              </div>
+            </div>
 
-    <div class="menu__schedule">
-      <span class="menu__schedule-label">Розклад сьогодні:</span>
-      <span class="menu__schedule-hours">12:00 - 19:00</span>
-    </div>
+            <button class="expositions__ticket">
+              <span class="expositions__ticket-text">Купити квиток</span>
+            </button>
+          </div>
+          <!-- 2-item -->
+          <div class="expositions__item">
+            <img
+              src="/src/images/events/event-img-2.png"
+              alt="item-foto"
+              class="events__item--image"
+            />
 
-    <address class="menu__address">
-      <a href="https://www.google.com/maps?q=вул.+М.+Грушевського,+6,+Київ,+01001" target="_blank"
-        class="menu__address-link">
-        <span class="menu__address-label">Адреса:</span>
-        <span class="menu__address-text">Київ, вул. М.Грушевського,6</span>
-      </a>
-    </address>
+            <div class="expositions__item--content">
+              <div class="expositions__item--label">Діє постійно</div>
+              <div class="expositions__item--name">
+                Мистецтво ХХ ст. — XXI ст.
+              </div>
+              <div class="expositions__item--description">
+                Знакові роботи Алли Горської, Миколи Самокиша, Федора
+                Кричевського та інших митців.
+              </div>
+            </div>
 
-    <div class="menu__content">
-      <nav class="nav menu__nav">
-        <ul>
-          <li class="nav__item">
-            <a class="nav__link" href="#Актуальні виставки">Актуальні виставки</a>
-          </li>
+            <button class="expositions__ticket">
+              <span class="expositions__ticket-text">Купити квиток</span>
+            </button>
 
-          <li class="nav__item">
-            <a class="nav__link" href="#Найближчі події">Найближчі події</a>
-          </li>
-
-          <li class="nav__item">
-            <a class="nav__link" href="#Новини">Новини</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="menu__border"></div>
-
-    </div>
-    <div class="menu__ticket">
-      <span class="menu__ticket-text">Купити квиток</span>
-    </div>
-    <!-- Border -->
-
-  </aside>
-
-  <script src="scripts/main.js"></script>
-</body>
-
+            <button class="expositions__archive">
+              <span class="expositions__archive--text">Архів виставок</span>
+              <img
+                src="../src/images/events/event-btn-arrow.png"
+                alt="icon"
+                class="events__archive--btn"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="scripts/main.js"></script>
+  </body>
 </html>
