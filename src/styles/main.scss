@@ -1,7 +1,7 @@
 @import 'utils';
 @import 'fonts';
-@import 'typography';
+@import './block/header';
+@import './block/page';
+@import './block/menu';
+@import './block/icon';
 
-body {
-  background: $c-gray;
-}
