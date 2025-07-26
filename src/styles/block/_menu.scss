@@ -93,23 +93,4 @@
     height: 1px;
     background-color: $white;
   }
-
-  &__ticket {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    height: 60px;
-    background-color: $main;
-    border: none;
-    cursor: pointer;
-
-    &-text {
-      @extend %ticket;
-
-      white-space: nowrap;
-    }
-  }
 }

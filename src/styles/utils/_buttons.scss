@@ -1,0 +1,42 @@
+.button {
+  @extend %buttons-text;
+
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+
+&-primary {
+  background-color: $main;
+  padding: 0;
+
+&--text{
+  @extend %ticket;
+
+    }
+  }
+
+&-secondary {
+  margin-top: 30px;
+  
+  border: 1px solid $main;
+  background-color: #fff;
+   
+  &--text {
+     @extend %buttons-text;
+
+       color: $main;
+   } 
+
+       &--image{
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
