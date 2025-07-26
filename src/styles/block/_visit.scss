@@ -1,0 +1,44 @@
+.visit {
+  margin-top: 90px;
+  position: relative;
+  width: 100%;
+  height: 416px;
+  background-color: $background;
+ 
+  &__container {
+  @include content-padding-inline;
+   }
+
+   &__title {
+     @extend %h-1;
+    margin: 0 ;
+    padding-block: 50px 20px;
+    font-size: 38px;
+   }
+
+  &__description {
+     @extend %main-text;
+     color: $white;
+     padding-bottom: 40px;
+  }
+
+    &__ticket {
+      margin-bottom: 50px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 0;
+    width: 100%;
+    height: 60px;
+    background-color: $main;
+    cursor: pointer;
+
+    &--text {
+      @extend %ticket;
+
+      white-space: nowrap;
+    }
+  }
+}
