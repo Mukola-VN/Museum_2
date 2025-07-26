@@ -10,33 +10,66 @@
   gap: 8px;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 
-&-primary {
-  background-color: $main;
-  padding: 0;
+  // === PRIMARY BUTTON ===
+  &-primary {
+    background-color: $main; // Default
+    padding: 0;
+    color: #fff;
 
-&--text{
-  @extend %ticket;
+    &:hover {
+      background-color: #AF3419; // Hover
+    }
 
+    &:active {
+      background-color: #EA340D; // Pressed
+    }
+
+    &:disabled {
+      background-color: #DD836F; // Disabled
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    &--text {
+      @extend %ticket;
+      color: #fff;
     }
   }
 
-&-secondary {
-  margin-top: 30px;
-  
-  border: 1px solid $main;
-  background-color: #fff;
-   
-  &--text {
-     @extend %buttons-text;
+  // === SECONDARY BUTTON ===
+  &-secondary {
+    margin-top: 30px;
+    border: 1px solid $main;
+    background-color: #fff;
+    color: $main;
 
-       color: $main;
-   } 
+    &:hover {
+      color: #AF3419;
+      border-color: #AF3419;
+    }
 
-       &--image{
+    &:active {
+      color: #EA340D;
+      border-color: #EA340D;
+    }
+
+    &:disabled {
+      color: #DD836F;
+      border-color: #DD836F;
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    &--text {
+      @extend %buttons-text;
+      color: inherit; // наслідує від стейту
+    }
+
+    &--image {
       width: 20px;
       height: 20px;
     }
   }
 }
-

@@ -1,0 +1,61 @@
+.subscribe {
+  @include content-padding-inline;
+  margin-top: 120px;
+
+  &__container {
+    padding-top: 20px;
+  }
+
+  &__title {
+    @extend %h-2;
+    margin: 0;
+  }
+
+  &__description {
+    @extend %main-text;
+    padding-bottom: 50px;
+  }
+
+  &__form {
+    display: flex;
+    align-items: start;
+    padding-bottom: 30px;
+    width: 100%;
+
+    &--input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #1C1B29; // Default state
+      background-color: transparent;
+      color: #1C1B29;
+      @extend %main-text;
+
+      &::placeholder {
+        color: #1C1B29;
+        transition: color 0.3s;
+      }
+        
+      &:hover {
+        border-bottom: 1px solid #CD4D31;
+
+        &::placeholder {
+          color: #CD4D31;
+        }
+      }
+
+      &:focus {
+        outline: none;
+        border-bottom: 1px solid #CD4D31;
+
+        &::placeholder {
+          color: transparent; // прибираємо текст при фокусі
+        }
+      }
+
+      &:not(:placeholder-shown) {
+        font-weight: 700;
+        color: #1C1B29;
+      }
+    }
+  }
+}
