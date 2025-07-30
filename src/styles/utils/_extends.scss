@@ -76,3 +76,11 @@
   line-height: 150%;
   text-decoration: none;
 }
+
+// footer
+
+%footer-title {
+  @extend %h-1;
+
+  font-size: 18px;
+}

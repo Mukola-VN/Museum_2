@@ -1,50 +1,87 @@
 .events {
   @include content-padding-inline;
 
-  margin-top: 120px;
+  margin-top: 60px;
 
   &__container {
-    padding-top: 60px;
+  padding-top: 60px;
+  
+  @include on-tablet {
+
+   @include page-grid;
+gap: 30px;
+  }
+
   }
 
   &__title {
     @extend %h-2;
 
     margin: 0 auto;
+
+    @include on-tablet {
+      font-size: 40px;
+    }
   }
 
   &__item {
     padding-bottom: 60px;
-
-   &:last-child {
-    padding: 0;
-   }
-
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-  
 
-    &-image {
-      display: block;
-      object-fit: cover;
+    &:last-child {
       padding: 0;
+    }
 
+   @include on-tablet {
+    display: contents;
+   }
+
+    &--image {
       width: 100%;
       height: 356px;
+    object-fit: cover;
+
+      @include on-tablet {
+        grid-column: 1/4;
+
+        width: 330px;
+        height: 422px;
+      }
     }
+
+     &--content {
+     display: flex;
+     flex-direction: column;
+  
+    @include on-tablet {
+    max-width: 330px;
+    grid-column: 4 / 7;
+
+    }
+}
+
 
     &--label {
       @extend %main-text;
 
       padding-top: 20px;
       color: $main;
+
+      @include on-tablet {
+        padding: 0;
+      }
     }
 
     &--name {
       @extend %h-3;
 
       padding-top: 10px;
+
+      @include on-tablet {
+        font-size: 24px;
+      }
     }
 
     &--description {
@@ -52,6 +89,26 @@
 
       padding-top: 20px;
       padding-bottom: 30px;
+
+      @include on-tablet {
+       max-height: 72px;
+       padding-bottom: 50px;
+      }
+    }
+  }
+
+  &--button{
+
+    @include on-tablet {
+
+      position: absolute;
+      top: 2117px;
+      left: 519px;
+  
+      width: 210px;
+      height: 60px;
+      margin: 0;
+      padding: 0;
     }
   }
 }

@@ -1,12 +1,12 @@
 // SCREEN SIZE
 @mixin on-tablet {
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-size) {
     @content;
   }
 }
 
 @mixin on-desktop {
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-size) {
     @content;
   }
 }
@@ -15,7 +15,7 @@
   padding-inline: 20px;
 
   @include on-tablet {
-    padding-inline: 34px;
+    padding-inline: 39px;
   }
 
   @include on-desktop {
@@ -27,5 +27,20 @@
   transition: #{$_property} 0.3s;
   &:hover {
     #{$_property}: $_toValue;
+  }
+}
+
+
+@mixin page-grid {
+  @include on-tablet {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 30px;
+    margin: 0 auto;
+  }
+
+  @include on-desktop {
+    display: grid; // додано!
+    grid-template-columns: repeat(12, 1fr);
   }
 }

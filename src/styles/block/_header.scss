@@ -1,30 +1,47 @@
 .header {
   position: relative;
-  z-index: 2;
+  z-index: 2; 
+  background-color: $background;
+
 
   &__container {
     @include content-padding-inline;
-
-    background-color: $background;
-    height: 100%;
   }
 
   &__top-bar {
     padding-top: 20px;
     padding-bottom: 50px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+
+    @include on-tablet {
+      padding-bottom: 99px;
+    }
   }
 
   &__logo {
     width: 100%;
+    transition: 0.3s ease;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
 
     &-img {
       width: 123px;
       height: 40px;
+      transition: 0.3s ease;
     }
   }
+
+  // відступи задав у файлі icons.
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  //
 
   &__date-text {
     @extend %header-text;
@@ -36,12 +53,25 @@
     padding-top: 10px;
     padding-bottom: 30px;
     margin: 0;
+
+    @include on-tablet {
+      font-size: 72px;
+      padding-bottom: 20px;
+      max-width: 569px;
+      padding-top: 20px;
+      height: auto;
+    }
   }
 
   &__description-text {
     @extend %header-text;
 
     padding-bottom: 40px;
+
+    @include on-tablet {
+      max-width: 330px;
+      padding-bottom: 48px;
+    }
   }
 
   &__image {
@@ -51,10 +81,19 @@
 
     padding-top: 40px;
 
+    @include on-tablet {
+      padding-top: 70px;
+    }
+
     &-img {
       width: 245px;
       height: 273px;
       object-fit: contain;
+
+      @include on-tablet {
+        width: 443px;
+        height: 494px;
+      }
     }
   }
 }
