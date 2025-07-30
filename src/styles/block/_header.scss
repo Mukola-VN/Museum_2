@@ -7,7 +7,9 @@
   
   &__container {
     @include content-padding-inline;
-    @include desktop-grid;
+      @include desktop-grid;
+  
+
   }
 
   &__top-bar {
@@ -123,34 +125,37 @@
       }
       
       @include on-desktop {
-        padding: 0;
+        padding-inline: 0;
         width: 625px;
         height: 663px;
 
-        grid-column: 8/13;
-
+        grid-column: 7/13;
       }
      }
 
     }
 
   &__border {
+     
     
-
     @include on-desktop {
       display: flex;
-
-
-      grid-column: 1 / 7;
       padding-bottom: 50px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      grid-column: 1 / 7;
+      gap:20px;
+
     }
+
   &--date {
     display: none;
     @include on-desktop {
       display: block; 
       font-size: 20px;
       color: $white;
-
+white-space: nowrap;
     }
   }
 
