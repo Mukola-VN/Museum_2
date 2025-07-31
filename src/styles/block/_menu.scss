@@ -4,15 +4,7 @@
   background-color: $background;
   overflow: auto;
 
-  height: 747px;
 
-  @include on-tablet {
-   max-height: 1092px;
-  }
-
-  @include on-desktop {
-    height: 800px;
-  }
 
   &__container {
     @include on-tablet {
