@@ -4,8 +4,6 @@
   background-color: $background;
   overflow: auto;
 
-
-
   &__container {
     @include on-tablet {
       @include page-grid;
@@ -216,8 +214,6 @@
       display: block;
       padding-top: 30px;
       grid-column: 2 / 6;
-
-    
     }
 
     @include on-desktop {
@@ -241,6 +237,7 @@
         right: 0;
         bottom: 0;
         object-fit: cover;
+         align-self: flex-end;
       }
     }
   }
