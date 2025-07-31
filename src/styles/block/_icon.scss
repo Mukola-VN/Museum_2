@@ -37,7 +37,6 @@
 
     @include on-tablet {
       order: 2;
-      margin-left: 44px;
     }
 
     &:hover {
@@ -99,6 +98,7 @@
 
     @include on-tablet {
       order: 3;
+      margin-right: 44px;
     }
 
     &:hover {

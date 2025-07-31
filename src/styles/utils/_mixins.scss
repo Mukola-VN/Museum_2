@@ -29,7 +29,7 @@
     #{$_property}: $_toValue;
   }
 }
-
+  
 
 @mixin page-grid {
   @include on-tablet {
@@ -42,17 +42,9 @@
   @include on-desktop {
     display: grid; 
     grid-template-columns: repeat(12, 1fr);
-  }
-}
-
-@mixin desktop-grid {
-
-    @include on-desktop {
-    display: grid; 
-    grid-template-columns: repeat(12, 1fr);
-       column-gap: 30px;
+    grid-template-rows: auto auto 1fr auto;
+    column-gap: 30px;
     margin: 0 auto;
-
   }
-
 }
+

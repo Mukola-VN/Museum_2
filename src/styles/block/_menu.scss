@@ -1,26 +1,29 @@
 .menu {
   @include content-padding-inline;
-
   box-sizing: border-box;
   background-color: $background;
   overflow: auto;
 
-
   &__container {
-
     @include on-tablet {
-     @include page-grid;
+      @include page-grid;
+      
     }
-
   }
+
   &__top-bar {
     padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: sticky;
+
     @include on-tablet {
-      grid-column: 1/7;
+      grid-column: 1 / -1;
+    }
+
+    @include on-desktop {
+      padding-top: 26px;
     }
   }
 
@@ -45,7 +48,6 @@
 
     @include on-tablet {
       flex-direction: row-reverse;
-      grid-column: 6 / 7;
     }
   }
 
@@ -54,8 +56,11 @@
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    
-  
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+
     &-label {
       @extend %menu-text;
     }
@@ -64,18 +69,17 @@
       @extend %menu-text-bold;
     }
 
-    &:hover {
-      filter: brightness(0.9);
+    @include on-tablet {
+      grid-column: 1 / 3;
     }
-
-   @include on-tablet {
-    grid-column: 1/3;
-   }
-
   }
 
   &__address {
     padding-top: 20px;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
 
     &-link {
       display: flex;
@@ -92,23 +96,24 @@
       @extend %menu-text-bold;
     }
 
-    &:hover {
-      filter: brightness(0.9);
-    }
-
     @include on-tablet {
-      grid-column: 3/6;
-      align-items:start;
+      grid-column: 3 / 6;
+      align-items: start;
     }
   }
 
   &__content {
     padding-block: 40px;
 
-      @include on-tablet {
-      grid-column: 1/5;
+    @include on-tablet {
+      grid-column: 1 / 5;
       padding-top: 50px;
       padding-bottom: 0;
+
+      @include on-desktop {
+        padding-top: 70px;
+        grid-column: 1 / 6;
+      }
     }
   }
 
@@ -124,54 +129,109 @@
     &__item {
       padding-bottom: 20px;
 
+      @include on-tablet {
+        padding-bottom: 30px;
+      }
+
+      @include on-desktop {
+        padding-bottom: 60px;
+      }
+
       &:hover {
         filter: brightness(0.8);
       }
 
       &:last-child {
         padding-bottom: 40px;
+
+        @include on-desktop {
+          padding-bottom: 60px;
+        }
       }
     }
 
     &__link {
-      @extend %menu-text-link;
-    }
+       @extend %menu-text-link;
+
+      position: relative; 
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; // трохи нижче тексту
+    width: 0;
+    height: 1px;
+    background-color: $white;
+    transition: width 0.3s ease;
   }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  @include on-desktop {
+    font-size: 40px;
+  }
+
+  @include on-desktop {
+      font-size: 48px;
+      white-space: nowrap;
+  }
+ }
+}
 
   &__border {
     width: 100%;
     height: 1px;
     background-color: $white;
 
-     @include on-tablet {
-    width: 690px;
-  }
-}
-
-.menu__buy-button {
-
-  @include on-tablet {
-    grid-column: 1 / 4;
-    justify-self: start;
-    margin-top: 50px;
-  }
- }
-
- &__image {
-  display:  none;
- 
     @include on-tablet {
-      padding-top: 30px;
-      display: block;
-      grid-column: 2/6;
-      height: 466px;
-      width: 422px;
+      width: 690px;
     }
-    
+
+    @include on-desktop {
+         width:570px; 
+    }
+  }
+
+  &__buy-button {
+    @include on-tablet {
+      grid-column: 1 / 4;
+      justify-self: start;
+      margin-top: 50px;
+
+      @include on-desktop {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  &__image {
+    display: none;
+
+    @include on-tablet {
+      display: block;
+      padding-top: 30px;
+      grid-column: 2 / 6;
+      width: 422px;
+      height: 466px;
+    }
+
+    @include on-desktop {
+      width: 624px;
+      height: 697px;
+      grid-column: 7 / 13;
+    }
+
     &-img {
-      width: 100%;
-      height: 100%;
+      width: 624px;
+      height: 697px;
+      position: absolute;
+      top: 103px;
+      right: 0;
+      bottom: 0;
       object-fit: cover;
     }
- }
+  }
 }

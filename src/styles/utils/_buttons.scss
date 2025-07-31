@@ -18,12 +18,17 @@
     @include on-tablet {
       width: 330px;
     }
+
+    @include on-desktop {
+      width: 270px;
+    }
   
   // === PRIMARY BUTTON ===
   &-primary {
     background-color: $main; 
     padding: 0;
     color: $white;
+    
     
 
     &:hover {
@@ -52,6 +57,15 @@
     border: 1px solid $main;
     background-color: #fff;
     color: $main;
+
+    @include on-tablet {
+      width: 210px;
+      height: 60px;
+    }
+
+    @include on-desktop {
+      width:270px;  
+    }
 
     &:hover {
       color: #af3419;
