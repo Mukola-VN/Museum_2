@@ -42,9 +42,17 @@
   @include on-desktop {
     display: grid; 
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto auto 1fr auto;
+
     column-gap: 30px;
     margin: 0 auto;
   }
 }
 
+@mixin image-hover($scale: 1.01, $brightness: 0.8, $transition: 0.3s) {
+  transition: transform $transition ease;
+
+  &:hover {
+    transform: scale($scale);
+    filter: brightness($brightness);
+  }
+}

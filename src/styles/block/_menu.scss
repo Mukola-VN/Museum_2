@@ -214,8 +214,7 @@
       display: block;
       padding-top: 30px;
       grid-column: 2 / 6;
-      width: 422px;
-      height: 466px;
+    
     }
 
     @include on-desktop {
@@ -225,13 +224,22 @@
     }
 
     &-img {
-      width: 624px;
-      height: 697px;
-      position: absolute;
-      top: 103px;
-      right: 0;
-      bottom: 0;
-      object-fit: cover;
+
+
+      @include on-tablet {
+      width: 422px;
+      height: 466px;
+      }
+      
+      @include on-desktop {
+        width: 624px;
+        height: 697px;
+        position: absolute;
+        top: 103px;
+        right: 0;
+        bottom: 0;
+        object-fit: cover;
+      }
     }
   }
 }

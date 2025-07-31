@@ -5,14 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NA MU</title>
-  <link rel="stylesheet" href="./styles/main.scss" />
+  <link rel="stylesheet" href="./styles/main.scss"/>
+    <link rel="icon" href="./images/favicon/favicon.png" type="image/x-icon" />
 </head>
 
 <body class="page__body">
   <header class="header">
     <div class="header__container">
       <div class="header__top-bar">
-        <a href="#" class="header__logo">
+        <a href="#page" class="header__logo">
           <img src="./images/header/header-logo.png" alt="NA MU logo" class="header__logo-img" />
         </a>
 
@@ -25,23 +26,23 @@
       </div>
 
 
-         <div class="header__date">10 серпня - 10 листопада</div>
-         <!-- Заголовок  -->
-         <h1 class="header__title">Мистецтво ХІХ - ХХ ст.</h1>
-   
-         <div class="header__description">
-           Внесок українських митців у світову культуру 19-20ст
-         </div>
-   
-         <!-- кнопка -->
-         <button class="button button-primary header--button">
-           <span class="button-primary--text">Купити квиток</span>
-         </button>
-   
-         <div class="header__border">
-           <span class="header__border--date">10.08 - 10.10</span>
-           <div class="header__border--line"></div>
-         </div>
+      <div class="header__date">10 серпня - 10 листопада</div>
+      <!-- Заголовок  -->
+      <h1 class="header__title">Мистецтво ХІХ - ХХ ст.</h1>
+
+      <div class="header__description">
+        Внесок українських митців у світову культуру 19-20ст
+      </div>
+
+      <!-- кнопка -->
+      <button class="button button-primary header--button">
+        <span class="button-primary--text">Купити квиток</span>
+      </button>
+
+      <div class="header__border">
+        <span class="header__border--date">10.08 - 10.10</span>
+        <div class="header__border--line"></div>
+      </div>
 
 
       <div class="header__image">
@@ -85,19 +86,19 @@
         <nav class="nav menu__nav">
           <ul>
             <li class="nav__item">
-              <a class="nav__link" href="#Актуальні виставки">
+              <a class="nav__link" href="#expositions">
                 Актуальні виставки
               </a>
             </li>
 
             <li class="nav__item">
-              <a class="nav__link" href="#Найближчі події">
+              <a class="nav__link" href="#events">
                 Найближчі події
               </a>
             </li>
 
             <li class="nav__item">
-              <a class="nav__link" href="#Новини">
+              <a class="nav__link" href="#news">
                 Новини
               </a>
             </li>
@@ -122,13 +123,13 @@
 
   <main class="main">
     <!-- expositions -->
-    <section class="expositions">
+    <section class="expositions" id="expositions">
       <h2 class="expositions__title">Актуальні виставки</h2>
 
       <div class="expositions__container">
         <!-- 1-item -->
         <div class="expositions__item">
-          <img src="./images/expositions/expositions-img-1.png" alt="item-foto" class="expositions__item--image" />
+          <div class="expositions__item--image expositions__item--image--angels"></div>
           <div class="expositions__item--content">
             <div class="expositions__item--label">11.07 - 22.09</div>
             <div class="expositions__item--name">
@@ -148,8 +149,8 @@
 
         <!-- 2-item -->
         <div class="expositions__item">
-          <img src="./images/expositions/expositions-img-2.png" alt="item-foto" class="expositions__item--image " />
 
+          <div class="expositions__item--image expositions__item--image--modern-art"></div>
           <div class="expositions__item--content">
             <div class="expositions__item--label">Діє постійно</div>
             <div class="expositions__item--name">
@@ -175,46 +176,46 @@
     </section>
 
     <!-- EVENTS-->
-    <section class="events">
+    <section class="events" id="events">
       <h2 class="events__title">Найближчі події</h2>
 
       <div class="events__container">
         <!-- 1-item -->
         <div class="events__item">
-          <img src="./images/events/events-img-1.png" alt="item-foto" class="events__item--image" />
+          <div class="events__item--image events__item--image--curator"></div>
           <div class="events__item--content">
             <div class="events__item--label">14.08 о 13:00</div>
             <div class="events__item--name">
               Кураторські екскурсії від Павла Гудімова
             </div>
             <div class="events__item--description">
-              Таємниці підготовки, історії експонатів, магія дійства до і в
-              момент вашої присутності – розгортатиметься...
+              Таємниці підготовки, історії експонатів, магія дійства до і в момент вашої присутності –
+              розгортатиметься...
             </div>
+            <!-- кнопка -->
             <button class="button button-primary">
               <span class="button-primary--text">Зареєструватись</span>
             </button>
+
           </div>
-          <!-- кнопка -->
         </div>
 
         <!-- 2-item -->
         <div class="events__item">
-          <img src="./images/events/events-img-2.png" alt="item-foto" class="events__item--image" />
+          <div class="events__item--image events__item--image--australia"></div>
           <div class="events__item--content">
             <div class="events__item--label">16.08 о 13:00</div>
             <div class="events__item--name">
               Майстер-клас “Подорож до Австралії”
             </div>
             <div class="events__item--description">
-              Цієї неділі о 14:00 на арт-мандрівників чекає останній пункт
-              кругосвітньої подорожі - Австралія.
+              Цієї неділі о 14:00 на арт-мандрівників чекає останній пункт кругосвітньої подорожі - Австралія.
             </div>
-            <button class="button button-primary ">
+            <!-- кнопка-1 -->
+            <button class="button button-primary">
               <span class="button-primary--text">Зареєструватись</span>
             </button>
           </div>
-          <!-- кнопка-1 -->
 
           <!-- кнопка-2 -->
           <button class="button button-secondary events--button">
@@ -229,27 +230,37 @@
     <!-- Visit -->
     <section class="visit">
       <div class="visit__container">
-        <h2 class="visit__title">Сплануйте <br>візит до музею</h2>
-        <div class="visit__description">
-          Оберіть зручний день, зареєструйтесь на події, що цікавлять, купіть
-          квиток заздалегідь, щоб ніщо не завадило вам насолоджуватись
-          мистецтвом.
+        <div class="visit__text">
+
+          <h2 class="visit__title">Сплануйте <br>візит до музею</h2>
+          <div class="visit__description">
+            Оберіть зручний день, зареєструйтесь на події, що цікавлять, купіть
+            квиток заздалегідь, щоб ніщо не завадило вам насолоджуватись
+            мистецтвом.
+          </div>
+
+          <div class="visit__image">
+            <img src="./images/visit/visit-img.png" alt="foto" class="visit__image--img">
+          </div>
+
+          <!-- кнопкаа -->
+          <button class="button button-primary visit--button">
+            <span class="button-primary--text">Почати</span>
+          </button>
+
         </div>
-        <!-- кнопкаа -->
-        <button class="button button-primary">
-          <span class="button-primary--text">Почати</span>
-        </button>
+
       </div>
     </section>
 
     <!-- News -->
-    <section class="news">
+    <section class="news" id="news">
       <h2 class="news__title">Новини</h2>
 
       <div class="news__container">
         <!-- 1-item -->
         <div class="news__item">
-          <img src="./images/news/news-img-1.png" alt="item-foto" class="news__item--image" />
+          <div class="news__item--image news__item--image--winner"></div>
           <div class="news__item--content">
             <div class="news__item--label">9 серпня 2019</div>
             <div class="news__item--name">Оголошення переможця</div>
@@ -259,30 +270,34 @@
             </div>
           </div>
         </div>
+
         <!-- 2-item -->
-        <div class="news__item-2">
-          <img src="./images/news/news-img-2.png" alt="item-foto" class="news__item--image" />
+        <div class="news__item news__item-2">
+          <div class="news__item--image news__item--image--cats"></div>
           <div class="news__item--content">
             <div class="news__item--label">9 серпня 2019</div>
             <div class="news__item--name">Міжнародний день котів</div>
-            <div class="news__item--description-1">
+            <div class="news__item--description news__item--description-1">
               Музей з левами не може просто так взяти і пропустити Міжнародний
               день котів!
             </div>
           </div>
-          <!-- кнопка - 2  -->
         </div>
+
+        <!-- кнопка -->
         <button class="button button-secondary news--button">
           <span class="button-secondary--text">Усі новини</span>
           <img src="./images/expositions/expositions-btn-arrow.png" alt="icon" class="button-secondary--image" />
         </button>
+
       </div>
     </section>
+
     <!-- Subscribe -->
     <section class="subscribe">
-      <h2 class="subscribe__title">Підпишіться на дайджест</h2>
-
+      
       <div class="subscribe__container">
+        <h2 class="subscribe__title">Підпишіться на дайджест</h2>
         <div class="subscribe__description">
           Першими дізнавайтесь про новини музею та розіграші, отримуйте
           запрошення на події та читайте статті від кураторів
@@ -292,7 +307,7 @@
           <input type="email" class="subscribe__form--input" placeholder="e-mail" required />
           <!-- Subscribe Form Button -->
         </form>
-        <button class="button button-primary">
+        <button class="button button-primary subscribe--button">
           <span class="button-primary--text">Підписатись</span>
         </button>
       </div>
@@ -303,7 +318,7 @@
         <h3 class="footer__title">Контакти</h3>
         <address class="footer__address">
           <a href="https://www.google.com/maps?q=..." class="footer__address-link" target="_blank">
-            Київ, вул. М. Грушевського, 6
+            Київ,<br>вул. М. Грушевського, 6
           </a>
 
           <a href="tel:+2781357" class="footer__address--phone">
@@ -363,13 +378,13 @@
             <a href="#" class="footer__nav--title">
               Головна
             </a>
-            <a href="#" class="footer__nav--item">
+            <a href="#expositions" class="footer__nav--item">
               Виставка
             </a>
-            <a href="#" class="footer__nav--item">
+            <a href="#events" class="footer__nav--item">
               Події
             </a>
-            <a href="#" class="footer__nav--item">
+            <a href="#news" class="footer__nav--item">
               Новини
             </a>
           </ul>

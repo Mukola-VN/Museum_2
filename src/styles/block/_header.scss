@@ -93,7 +93,7 @@
 
   &__description{
     @extend %header-text;
-
+    max-width: 267px;
     padding-bottom: 40px;
 
     @include on-tablet {

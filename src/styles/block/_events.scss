@@ -1,34 +1,31 @@
 .events {
   @include content-padding-inline;
-
   margin-top: 60px;
-
+  position: relative;
 
   @include on-tablet {
     margin-top: 160px;
   }
   @include on-desktop {
-    margin-top: 140px;
+    margin-top: 200px;
   }
 
   &__container {
-  padding-top: 60px;
-  
-  @include on-tablet {
+    padding-top: 60px;
 
-   @include page-grid;
-    gap: 30px;
-  }
-  @include on-desktop {
-    gap: 60px;
-    padding-top: 70px;
-  }
-  
+    @include on-tablet {
+      @include page-grid;
+      gap: 30px;
+    }
+
+    @include on-desktop {
+      gap: 60px;
+      padding-top: 70px;
+    }
   }
 
   &__title {
     @extend %h-2;
-
     margin: 0 auto;
 
     @include on-tablet {
@@ -50,17 +47,22 @@
       padding: 0;
     }
 
-   @include on-tablet {
-    display: contents;
-   }
+    @include on-tablet {
+      display: contents;
+    }
 
     &--image {
+        @include image-hover(1.01, 0.9, 0.5s);
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       width: 100%;
       height: 356px;
-    object-fit: cover;
+      cursor: pointer;
 
       @include on-tablet {
-        grid-column: 1/4;
+        grid-column: 1 / 4;
         width: 330px;
         height: 422px;
       }
@@ -68,29 +70,35 @@
       @include on-desktop {
         width: 370px;
         height: 475px;
-        grid-column: 1/5;
+        grid-column: 1 / 5;
+      }
+
+      &--curator {
+        background-image: url("../images/events/events-img-1.png");
+      }
+
+      &--australia {
+        background-image: url("../images/events/events-img-2.png");
       }
     }
 
-     &--content {
-     display: flex;
-     flex-direction: column;
-  
-    @include on-tablet {
-    max-width: 330px;
-    grid-column: 4 / 7;
-    }
+    &--content {
+      display: flex;
+      flex-direction: column;
 
-    @include on-desktop {
-      max-width: 570px;
-      grid-column: 5/11;
-    }
-}
+      @include on-tablet {
+        max-width: 330px;
+        grid-column: 4 / 7;
+      }
 
+      @include on-desktop {
+        max-width: 570px;
+        grid-column: 5 / 11;
+      }
+    }
 
     &--label {
       @extend %main-text;
-
       padding-top: 20px;
       color: $main;
 
@@ -101,7 +109,6 @@
 
     &--name {
       @extend %h-3;
-
       padding-top: 10px;
 
       @include on-tablet {
@@ -111,21 +118,20 @@
 
     &--description {
       @extend %main-text;
-
       padding-top: 20px;
       padding-bottom: 30px;
 
       @include on-tablet {
-       max-height: 72px;
-       padding-bottom: 50px;
+        max-height: 72px;
+        padding-bottom: 50px;
       }
     }
   }
 
-  &--button{
+  &--button {
     @include on-tablet {
       position: absolute;
-      top: 2238px;
+      top: 0;
       left: 519px;
       margin: 0;
       padding: 0;
@@ -135,7 +141,7 @@
       right: 0;
       bottom: 0;
       left: 955px;
-      top: 2018px;
+      top: 0;
     }
   }
 }

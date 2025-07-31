@@ -1,6 +1,7 @@
 .expositions {
   @include content-padding-inline;
   margin-top: 90px;
+  position: relative;
 
 
   @include on-desktop {
@@ -54,8 +55,17 @@
     }
 
     &--image {
+      @include image-hover(1.01, 0.9, 0.5s);
+
       display: block;
-      object-fit: cover;
+      background-position: 17%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      
+
+      background-image: url("../images/expositions/expositions-img-4.png");
+ 
       padding: 0;
       width: 100%;
       height: 356px;
@@ -64,9 +74,22 @@
         height: 420px;
       }
 
-      @include on-desktop {
-        height: 484px;
+    @include on-desktop {
+      background-position: center center;
+       background-size: cover; 
+       background-repeat: no-repeat; 
+
+      height: 484px;
       }
+
+  &--angels {
+    background-image: url("../images/expositions/expositions-img-3.png");
+
+  }
+
+  &--modern-art {
+    background-image: url("../images/expositions/expositions-img-2.png");
+  }
     }
 
     &--label {
@@ -95,7 +118,7 @@
     &--description {
       @extend %main-text;
       padding-top: 20px;
-      padding-bottom: 30px;
+      padding-bottom: 5px;
       flex-grow: 1;
     }
   }
@@ -112,10 +135,11 @@
   &--button-2 {
 
     @include on-tablet {
+      
       position: absolute;
       margin: 0;
       left: 519px;
-      top: 1167px;
+      top: 0;
       padding: 0;
       width: 210px;
       height: 60px;
@@ -123,7 +147,7 @@
 
     @include on-desktop {
       position: absolute;
-      top: 910px;
+      top: 0;
       right:0;
       left:  955px;
 
