@@ -4,6 +4,16 @@
   background-color: $background;
   overflow: auto;
 
+  height: 747px;
+
+  @include on-tablet {
+   max-height: 1092px;
+  }
+
+  @include on-desktop {
+    height: 800px;
+  }
+
   &__container {
     @include on-tablet {
       @include page-grid;
@@ -214,12 +224,12 @@
       display: block;
       padding-top: 30px;
       grid-column: 2 / 6;
+
     
     }
 
     @include on-desktop {
-      width: 624px;
-      height: 697px;
+     
       grid-column: 7 / 13;
     }
 

@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NA MU</title>
-  <link rel="stylesheet" href="./styles/main.scss"/>
-    <link rel="icon" href="./images/favicon/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./styles/main.scss" />
+  <link rel="icon" href="./images/favicon/favicon.png" type="image/x-icon" />
 </head>
 
 <body class="page__body">
@@ -35,8 +35,9 @@
       </div>
 
       <!-- кнопка -->
-      <button class="button button-primary header--button">
+      <a href="#visit" class="button button-primary header--button">
         <span class="button-primary--text">Купити квиток</span>
+      </a>
       </button>
 
       <div class="header__border">
@@ -109,9 +110,9 @@
         <div class="menu__border"></div>
       </div>
       <!-- кнопка  -->
-      <button class="button button-primary menu__buy-button">
+      <a href="#visit" class="button button-primary menu__buy-button">
         <span class="button-primary--text">Купити квиток</span>
-      </button>
+      </a>
 
       <div class="menu__image">
         <img src="./images/menu/img_menu-on-tablet.png" alt="img-menu" class="menu__image-img">
@@ -142,9 +143,9 @@
             </div>
           </div>
           <!-- кнопка  -->
-          <button class="button button-primary expositions--button-1">
+          <a href="#visit" class="button button-primary expositions--button-1">
             <span class="button-primary--text">Купити квиток</span>
-          </button>
+          </a>
         </div>
 
         <!-- 2-item -->
@@ -162,15 +163,15 @@
             </div>
           </div>
           <!-- кнопка-1-->
-          <button class="button button-primary expositions--button-1">
+          <a href="#visit" class="button button-primary expositions--button-1">
             <span class="button-primary--text">Купити квиток</span>
-          </button>
+          </a>
 
           <!-- кнопка-2-->
-          <button class="button button-secondary expositions--button-2">
+          <a href="#events" class="button button-secondary expositions--button-2">
             <span class="button-secondary--text">Архів виставок</span>
             <img src="./images/expositions/expositions-btn-arrow.png" alt="icon" class="button-secondary--image" />
-          </button>
+          </a>
         </div>
       </div>
     </section>
@@ -193,10 +194,9 @@
               розгортатиметься...
             </div>
             <!-- кнопка -->
-            <button class="button button-primary">
+            <a href="#subscribe" class="button button-primary">
               <span class="button-primary--text">Зареєструватись</span>
-            </button>
-
+            </a>
           </div>
         </div>
 
@@ -212,23 +212,23 @@
               Цієї неділі о 14:00 на арт-мандрівників чекає останній пункт кругосвітньої подорожі - Австралія.
             </div>
             <!-- кнопка-1 -->
-            <button class="button button-primary">
+            <a href="#subscribe" class="button button-primary">
               <span class="button-primary--text">Зареєструватись</span>
-            </button>
+            </a>
           </div>
 
           <!-- кнопка-2 -->
-          <button class="button button-secondary events--button">
+          <a href="#" class="button button-secondary events--button">
             <span class="button-secondary--text">Календар подій</span>
             <img src="./images/expositions/expositions-btn-arrow.png" alt="icon" class="button-secondary--image" />
-          </button>
+          </a>
         </div>
       </div>
 
     </section>
 
     <!-- Visit -->
-    <section class="visit">
+    <section class="visit" id="visit">
       <div class="visit__container">
         <div class="visit__text">
 
@@ -244,12 +244,10 @@
           </div>
 
           <!-- кнопкаа -->
-          <button class="button button-primary visit--button">
+          <a href="#" class="button button-primary visit--button">
             <span class="button-primary--text">Почати</span>
-          </button>
-
+          </a>
         </div>
-
       </div>
     </section>
 
@@ -285,17 +283,17 @@
         </div>
 
         <!-- кнопка -->
-        <button class="button button-secondary news--button">
+        <a href="#" class="button button-secondary news--button">
           <span class="button-secondary--text">Усі новини</span>
           <img src="./images/expositions/expositions-btn-arrow.png" alt="icon" class="button-secondary--image" />
-        </button>
+        </a>
 
       </div>
     </section>
 
     <!-- Subscribe -->
-    <section class="subscribe">
-      
+    <section class="subscribe" id="subscribe">
+
       <div class="subscribe__container">
         <h2 class="subscribe__title">Підпишіться на дайджест</h2>
         <div class="subscribe__description">
@@ -307,9 +305,9 @@
           <input type="email" class="subscribe__form--input" placeholder="e-mail" required />
           <!-- Subscribe Form Button -->
         </form>
-        <button class="button button-primary subscribe--button">
+        <a href="#subscribe" class="button button-primary subscribe--button">
           <span class="button-primary--text">Підписатись</span>
-        </button>
+        </a>
       </div>
     </section>
 
