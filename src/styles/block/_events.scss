@@ -2,6 +2,7 @@
   @include content-padding-inline;
   margin-top: 60px;
   position: relative;
+  margin: 0 auto;
 
   @include on-tablet {
     margin-top: 160px;
@@ -41,7 +42,6 @@
     padding-bottom: 60px;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
 
     &:last-child {
       padding: 0;
