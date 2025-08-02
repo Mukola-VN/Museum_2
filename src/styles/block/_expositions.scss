@@ -3,12 +3,13 @@
 
   margin-top: 90px;
   position: relative;
-  margin: 0 auto;
+
+  @include on-tablet {
+   margin-top: 105px;
+  }
 
   @include on-desktop {
-    margin-top: 110px;
- margin: 0 auto;
-
+   margin-top: 110px;
   }
 
   &__container {
@@ -19,49 +20,56 @@
       gap: 29px;
       padding-top: 70px;
     }
-
-    @include on-desktop {
-      // розташування 2 item !!!!!
-      .expositions__item:nth-of-type(2) {
-        grid-column: 7 / 13;
-      };
-
-    }
   }
 
   &__title {
     @extend %h-2;
     margin: 0 auto;
-
+  
     @include on-tablet {
       font-size: 40px;
-      padding-top: 100px;
+
     }
 
     @include on-desktop {
       font-size: 48px;
-      padding: 0;
     }
   }
 
   &__item {
-    padding-bottom: 60px;
+    // padding-bottom: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
-    margin: 0 auto;
+   
+    width: 100%;
+    height: 100%; 
+
 
     @include on-tablet {
-        margin: 0 auto;
-        width: 100%;
+      grid-column: 1/4;
 
     }
 
     @include on-desktop {
       grid-column: 1 / 7;
-      padding-bottom: 0;
-      
+    }
+
+    //  second-item
+    &-2 {
+      padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    @include on-tablet {
+      padding: 0;
+      grid-column: 4/7;
+    }
+
+      @include on-desktop {
+        grid-column: 7 / 13;
+      }
     }
 
     &--image {
@@ -74,9 +82,6 @@
       cursor: pointer;
       
 
-      background-image: url("../images/expositions/expositions-img-4.png");
- 
-      padding: 0;
       width: 100%;
       height: 356px;
 
@@ -85,9 +90,7 @@
       }
 
     @include on-desktop {
-      background-position: center center;
-       background-size: cover; 
-       background-repeat: no-repeat; 
+       background-position: center center;
 
       height: 484px;
       }
@@ -127,19 +130,15 @@
 
     &--description {
       @extend %main-text;
+
       padding-top: 20px;
-      padding-bottom: 5px;
       flex-grow: 1;
     }
   }
 
   &--button-1 {
+   margin-top: 30px;
 
-   margin-top: 25px;
-
-  @include on-desktop {
-    display: flex;
-  }
   }
 
   &--button-2 {
@@ -149,7 +148,7 @@
       position: absolute;
       margin: 0;
       left: 519px;
-      top: 105px;
+      top: 0;
       padding: 0;
       width: 210px;
       height: 60px;

@@ -1,10 +1,10 @@
 .news {
   @include content-padding-inline;
-  margin-top: 90px;
-padding: 0 auto;
+  padding-top: 90px;
+
   
   @include on-tablet {
-    margin-top: 120px;
+    padding-top: 120px;
     height: 621px;
   }
 
@@ -22,6 +22,7 @@ padding: 0 auto;
     }
 
     @include on-desktop {
+      @include page-grid;
       padding-top: 55px;
     }
   }
@@ -43,42 +44,53 @@ padding: 0 auto;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    width: 100%;
+
+
+    @include on-tablet {
+      grid-column: 1/4;
+      
+    }
 
     @include on-desktop {
       grid-column: 1 / 7;
+       width: 100%;
     }
 
     &-2 {
+
+      
+    @include on-tablet {
+      grid-column: 4/7;
+    }
+
       @include on-desktop {
         grid-column: 7 / 13;
       }
     }
 
     &--image {
-      @include image-hover(1.01, 0.9, 0.5s);
-
       background-repeat: no-repeat;
-     background-size: cover;
-      background-position: center center;
+      background-size: cover;
+      background-position: center ;
       width: 100%;
       height: 281px;
       cursor: pointer;
 
-      
+      @include image-hover(1.01, 0.9, 0.5s);
+
       @include on-tablet {
-        width: 330px;
         height: 330px;
-        grid-column: 1 / 3;
       }
 
       @include on-desktop {
-        width: 570px;
         height: 370px;
       }
 
       &--winner {
         
         background-image: url("../images/news/news-img-1.png");
+
 
         @include on-desktop {
           background-image: url("../images/news/news-img-1-desktop.png");
@@ -146,7 +158,7 @@ padding: 0 auto;
     @include on-tablet {
       position: absolute;
       left: 519px;
-      top: 3923px;
+      top: 3873px;
       width: 210px;
       height: 60px;
       margin: 0;
@@ -155,7 +167,7 @@ padding: 0 auto;
 
     @include on-desktop {
          left: 955px;
-         top: 4161px;
+         top: 4121px;
     }
   }
 }
